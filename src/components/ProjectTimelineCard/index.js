@@ -1,21 +1,10 @@
 import './index.css'
 import {AiFillCalendar} from 'react-icons/ai'
-import {withRouter} from 'react-router-dom'
 
 const ProjectTimelineCard = props => {
   const {projectInfo} = props
-  const {
-    title,
-    projectTitle,
-    description,
-    imageUrl,
-    duration,
-    projectUrl,
-  } = projectInfo
+  const {projectTitle, description, imageUrl, duration} = projectInfo
 
-  const onVisit = () => {
-    const {history} = props
-  }
   return (
     <div>
       <img src={imageUrl} alt={projectTitle} />
@@ -27,9 +16,9 @@ const ProjectTimelineCard = props => {
         </div>
       </div>
       <p>{description}</p>
-      <button onClick={onVisit}>Visit</button>
+      <button type="button">Visit</button>
     </div>
   )
 }
 
-export default withRouter(ProjectTimelineCard)
+export default ProjectTimelineCard

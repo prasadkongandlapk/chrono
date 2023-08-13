@@ -13,20 +13,19 @@ const TimelineView = props => {
         <h1>CCBP 4.0</h1>
       </div>
       <div className="time-card">
-        <Chrono mode="VERTICAL">
-          {timelineItemsList.map(each => {
-            if (each.categoryId === 'COURSE') {
-              return <CourseTimelineCard courseInfo={each} key={each.id} />
-            }
-            return null
-          })}
-          {timelineItemsList.map(each => {
-            if (each.categoryId === 'PROJECT') {
-              return <ProjectTimelineCard projectInfo={each} key={each.id} />
-            }
-            return null
-          })}
-        </Chrono>
+        {timelineItemsList.map(each => {
+          if (each.categoryId === 'COURSE') {
+            return <CourseTimelineCard courseInfo={each} key={each.id} />
+          }
+          return null
+        })}
+        <Chrono mode="VERTICAL" items={timelineItemsList} />
+        {timelineItemsList.map(each => {
+          if (each.categoryId === 'PROJECT') {
+            return <ProjectTimelineCard projectInfo={each} key={each.id} />
+          }
+          return null
+        })}
       </div>
     </div>
   )
