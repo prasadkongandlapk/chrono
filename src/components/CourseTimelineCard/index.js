@@ -18,7 +18,9 @@ const CourseTimeLineCard = props => {
       <div>
         <div className="tags">
           {tagsList.map(each => (
-            <p className="tag-item">{each.name}</p>
+            <div className="tags-bg">
+              <p className="tag-item">{each.name}</p>
+            </div>
           ))}
         </div>
       </div>

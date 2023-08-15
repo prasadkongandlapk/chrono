@@ -19,12 +19,16 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+.tags-bg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .tag-item {
   background-color: #b6bac0;
   margin-right: 5px;
-  font-size: 8px;
-  padding: 4px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   text-align: center;
   height: 20px;
   border-radius: 5px;

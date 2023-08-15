@@ -9,24 +9,22 @@ const TimelineView = props => {
   return (
     <div className="bg">
       <div className="size">
-        <h4>MY JOURNEY OF</h4>
-        <h1>CCBP 4.0</h1>
+        <h1>MY JOURNEY OF CCBP 4.0</h1>
       </div>
-      <div className="time-card">
+      <Chrono mode="VERTICAL_ALTERNATING" items={timelineItemsList}>
         {timelineItemsList.map(each => {
           if (each.categoryId === 'COURSE') {
             return <CourseTimelineCard courseInfo={each} key={each.id} />
           }
           return null
         })}
-        <Chrono mode="VERTICAL" items={timelineItemsList} />
         {timelineItemsList.map(each => {
           if (each.categoryId === 'PROJECT') {
             return <ProjectTimelineCard projectInfo={each} key={each.id} />
           }
           return null
         })}
-      </div>
+      </Chrono>
     </div>
   )
 }
