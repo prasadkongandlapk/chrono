@@ -23,9 +23,7 @@ const ProjectTimelineCard = props => {
         </div>
       </div>
       <p>{description}</p>
-      <Link to={projectUrl}>
-        <p type="button">Visit</p>
-      </Link>
+      <Link to={projectUrl}>Visit</Link>
     </div>
   )
 }
