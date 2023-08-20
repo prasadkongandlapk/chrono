@@ -1,5 +1,6 @@
-import TimelineView from './components/TimelineView'
+import {BrowserRouter} from 'react-router-dom'
 
+import TimelineView from './components/TimelineView'
 import './App.css'
 
 const timelineItemsList = [
@@ -267,6 +268,10 @@ const timelineItemsList = [
   },
 ]
 
-const App = () => <TimelineView timelineItemsList={timelineItemsList} />
+const App = () => (
+  <BrowserRouter>
+    <TimelineView timelineItemsList={timelineItemsList} />
+  </BrowserRouter>
+)
 
 export default App

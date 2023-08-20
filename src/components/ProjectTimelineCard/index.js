@@ -1,6 +1,6 @@
 import './index.css'
 import {AiFillCalendar} from 'react-icons/ai'
-import {Link} from 'react-router-dom'
+import {Link, withRouter} from 'react-router-dom'
 
 const ProjectTimelineCard = props => {
   const {projectInfo} = props
@@ -28,4 +28,4 @@ const ProjectTimelineCard = props => {
   )
 }
 
-export default ProjectTimelineCard
+export default withRouter(ProjectTimelineCard)
