@@ -1,6 +1,5 @@
 import './index.css'
 import {AiFillCalendar} from 'react-icons/ai'
-import {Link, withRouter} from 'react-router-dom'
 
 const ProjectTimelineCard = props => {
   const {projectInfo} = props
@@ -23,9 +22,12 @@ const ProjectTimelineCard = props => {
         </div>
       </div>
       <p>{description}</p>
-      <Link to={projectUrl}>Visit</Link>
+      <button type="button">
+        <a href={projectUrl} target="_blank" />
+        Visit
+      </button>
     </div>
   )
 }
 
-export default withRouter(ProjectTimelineCard)
+export default ProjectTimelineCard
